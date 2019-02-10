@@ -8,7 +8,7 @@ public class HasCoinState implements State {
     }
 
     public void insertCoin() {
-        System.out.println("You can't insert another Coin");
+        System.out.println("You can't insert another Coin. This gumball machine has sufficient coins to roll out a gumball. Please turn the crank to release a gumball.");
     }
 
     public void ejectCoin() {
