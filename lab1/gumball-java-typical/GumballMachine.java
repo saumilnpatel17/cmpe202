@@ -43,7 +43,7 @@ public class GumballMachine
         }
         else 
         {
-            System.out.println( "Please insert a coin" ) ;
+            System.out.println( "There are not sufficient coins to release a gumball" ) ;
         }        
     }
 
