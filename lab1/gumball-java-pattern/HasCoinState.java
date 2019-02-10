@@ -23,7 +23,10 @@ public class HasCoinState implements State {
         }
         else
         {
-            gumballMachine.setState(gumballMachine.getWaitingForCoinState());
+            if(gumballMachine.totalCoinsInserted < gumballMachine.cost)
+            {
+                gumballMachine.setState(gumballMachine.getWaitingForCoinState());
+            }
         }
         //gumballMachine.setState(gumballMachine.getNoCoinState());
     }
