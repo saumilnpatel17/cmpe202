@@ -86,7 +86,7 @@ Pattern Explanation:
 There are two patterns I have used here in my CRC cards:
 
 1. Observer pattern:
-	CustomerHandler1 is an observer who is watching TableManager for updates. When TableManager has table available, it notifies CustomerHandler1 to assign it to the next available party and CustomerHandler1 starts looking for the front of the line party.
+	TableManager plays a "Subject" role and CustomerHandler1 plays an "Observer" role. CustomerHandler1's job is to assign the table to the next available party. Therefore, when the table becomes available, CustomerHandler1 needs to be notified that the table is available and CustomerHandler1 can assign it to the next available party. CustomerHandler1 waits for the notification of "Table is available" to start its work. Therefore, I have used observer pattern.
 
 2. Chain of responsibility:
 	CustomerHandler1 and CustomerHandler2 are two classes which implement this pattern. When CustomerHandler1 looks for the next available party but couldn't find one, it passes this responsibility to its successor which is CustomerHandler2. CustomerHandler2 then starts to find the next suitable party which can be accommodated in the available table.
