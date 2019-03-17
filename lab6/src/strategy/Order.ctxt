@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Order
+comment1.params=c
+comment1.target=Order(double)
+comment2.params=b
+comment2.target=void\ addBurger(Burger)
+comment3.params=si
+comment3.target=void\ addSideItem(SideItem)
+comment4.params=
+comment4.target=void\ display()
+comment5.params=s
+comment5.target=void\ changeStrategy(DisplayStrategy)
+numComments=6

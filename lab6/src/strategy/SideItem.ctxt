@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=SideItem
+comment1.params=siName\ siPrice
+comment1.target=SideItem(java.lang.String,\ double)
+numComments=2
