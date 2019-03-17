@@ -15,8 +15,13 @@ The printed receipt can be PaperReceipt or PackagingSlip.
 
 Following is an exaplme of output:
 
-By default, the DisplayStrategy points to PaperReceipt.
+By default, the DisplayStrategy points to "PaperReceipt".
 
 <img src="PaperReceipt.PNG" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 
+
+Now DisplayStrategy reference is pointing "PackagingSlip".
 <img src="PackagingSlip.PNG" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
+
+Now DisplayStrategy reference is pointing "PaperReceipt".
+<img src="PaperReceipt.PNG" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
