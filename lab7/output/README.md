@@ -1,1 +1,1 @@
-<img src="DemoOutput.png">
+<img src="DemoOutput.PNG" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
