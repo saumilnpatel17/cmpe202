@@ -11,6 +11,7 @@
 
 
 import java.io.Console ;
+import java.util.Scanner;
 
 class Main
 {
@@ -18,12 +19,14 @@ class Main
     {
         App app = new App() ;
         Console c = System.console() ;
+        Scanner sc = new Scanner(System.in);
         for (;;) {
             System.out.print("\033[H\033[2J") ; // clear the screen
             System.out.flush() ;
             System.out.println( app.display() ) ;
             System.out.print( "Key (Digit or X or Delete) => " ) ;
-            String ch = c.readLine() ;
+            //String ch = c.readLine() ;
+            String ch = sc.nextLine();
             app.key( ch ) ;
         }
     }

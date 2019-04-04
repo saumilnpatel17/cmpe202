@@ -9,6 +9,8 @@ public class App {
     private CreditCardNum num;
     private CreditCardExp exp;
     private CreditCardCVC cvc;
+    private SpaceDecorator spaceDecorator;
+    private ForwardSlashDecorator forwardSlashDecorator;
     private int count;
 
     public App() {
@@ -17,10 +19,18 @@ public class App {
         num = new CreditCardNum();
         exp = new CreditCardExp();
         cvc = new CreditCardCVC();
+        spaceDecorator = new SpaceDecorator();
+        forwardSlashDecorator = new ForwardSlashDecorator();
 
         screen.addSubComponent(num);
         screen.addSubComponent(exp);
         screen.addSubComponent(cvc);
+
+        //Setup Decorator Pattern
+        num.setDecorator(spaceDecorator);
+        spaceDecorator.wrapDecorator(num);
+        exp.setDecorator(forwardSlashDecorator);
+        forwardSlashDecorator.wrapDecorator(exp);
 
         count = 0;
 
@@ -39,8 +49,29 @@ public class App {
     }
 
     public void key(String ch) {
-        count++;
-        screen.key(ch, count);
+
+        if (ch.toLowerCase().equals("x"))
+        {
+            if (count > 0) {
+                screen.key(ch.toLowerCase(), count);
+                count--;
+            }
+        }
+        else {
+            try {
+                if (count < 23) {
+                    int input = Integer.parseInt(ch);
+
+                    if (input >= 0 && input <= 9) {
+                        count++;
+                        screen.key(ch, count);
+                    } else
+                        System.out.println("Please enter one digit at a time.");
+                }
+            } catch (NumberFormatException nfe) {
+                System.out.println(nfe.getMessage());
+            }
+        }
     }
 
 }
