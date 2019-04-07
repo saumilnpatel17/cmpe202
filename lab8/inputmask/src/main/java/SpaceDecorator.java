@@ -25,7 +25,7 @@ public class SpaceDecorator extends CreditCardDecorator {
                 else
                     returnValue += value.substring(i);
             }
-            return "[" + returnValue + "]";
+            return "[" + returnValue + "]  ";
         }
     }
 

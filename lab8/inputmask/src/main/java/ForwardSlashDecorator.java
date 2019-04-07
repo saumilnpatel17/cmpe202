@@ -18,7 +18,7 @@ public class ForwardSlashDecorator extends CreditCardDecorator {
                 value = value.substring(0, 2) + "/" + value.substring((2));
             }
 
-            return "[" + value + "]";
+            return "[" + value + "]  ";
         }
     }
 
