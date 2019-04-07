@@ -2,8 +2,6 @@
 
 public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
 {
-
-	private SpaceDecorator decorator;
 	private IKeyEventHandler nextHandler ;
 	public String number = "" ;
 
@@ -12,10 +10,7 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
     }	
 
 	public String display() {
-		if ( number.equals("") )
-			return "[4444 4444 4444 4444]" + "  " ;
-		else
-			return "[" + this.decorator.display() + "]" ;
+		return number;
 	}	
 
 	public void key(String ch, int cnt) {
@@ -28,7 +23,6 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
 			else {
 				number += ch;
 			}
-			this.decorator.key(ch, cnt);
 		}
 		else if ( nextHandler != null )
 			nextHandler.key(ch, cnt) ;
@@ -36,11 +30,6 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
 
 	public void addSubComponent( IDisplayComponent c ) {
 		return ; // do nothing
-	}
-
-	public void setDecorator (SpaceDecorator d)
-	{
-		this.decorator = d;
 	}
 
 }

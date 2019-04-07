@@ -22,15 +22,13 @@ public class App {
         spaceDecorator = new SpaceDecorator();
         forwardSlashDecorator = new ForwardSlashDecorator();
 
-        screen.addSubComponent(num);
-        screen.addSubComponent(exp);
-        screen.addSubComponent(cvc);
-
         //Setup Decorator Pattern
-        num.setDecorator(spaceDecorator);
         spaceDecorator.wrapDecorator(num);
-        exp.setDecorator(forwardSlashDecorator);
         forwardSlashDecorator.wrapDecorator(exp);
+
+        screen.addSubComponent(spaceDecorator);
+        screen.addSubComponent(forwardSlashDecorator);
+        screen.addSubComponent(cvc);
 
         count = 0;
 

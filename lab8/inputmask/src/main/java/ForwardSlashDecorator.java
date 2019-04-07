@@ -2,28 +2,28 @@ public class ForwardSlashDecorator extends CreditCardDecorator {
 
     String value = "";
 
+    public void setNext (IKeyEventHandler next)
+    {
+        ((CreditCardExp)wrappedDisplayComponent).setNext(next);
+    }
+
     public String display()
     {
-        String returnValue = "";
+        value = wrappedDisplayComponent.display();
 
-        if (value.length() > 2)
-        {
-            returnValue = value.substring(0,2) + "/" + value.substring((2));
+        if ( value.equals("") )
+            return "[MM/YY]" + "  " ;
+        else {
+            if (value.length() > 2) {
+                value = value.substring(0, 2) + "/" + value.substring((2));
+            }
+
+            return "[" + value + "]";
         }
-        else
-            return value;
-
-        return returnValue;
     }
 
     public void key(String ch, int cnt)
     {
-        if( ch.equals("x"))
-        {
-            value = value.substring(0, value.length()-1);
-        }
-        else {
-            value += ch;
-        }
+        ((CreditCardExp)wrappedDisplayComponent).key(ch, cnt);
     }
 }

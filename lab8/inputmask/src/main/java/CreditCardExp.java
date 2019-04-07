@@ -2,8 +2,6 @@
 
 public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
 {
-
-	private ForwardSlashDecorator decorator;
 	private IKeyEventHandler nextHandler ;
 	private String date = "" ;
 
@@ -12,10 +10,7 @@ public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
     }	
 
 	public String display() {
-		if ( date.equals("") )
-			return "[MM/YY]" + "  " ;
-		else
-			return "[" + this.decorator.display() + "]" + "  " ;
+		return date;
 	}	
 
 	public void key(String ch, int cnt) {
@@ -25,7 +20,6 @@ public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
 			} else {
 				date += ch;
 			}
-			this.decorator.key(ch, cnt);
 		}
 
 		else if ( nextHandler != null )
@@ -34,11 +28,6 @@ public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
 
 	public void addSubComponent( IDisplayComponent c ) {
 		return ; // do nothing
-	}
-
-	public void setDecorator (ForwardSlashDecorator d)
-	{
-		this.decorator = d;
 	}
 
 }
