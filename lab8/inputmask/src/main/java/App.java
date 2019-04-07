@@ -48,10 +48,10 @@ public class App {
 
     public void key(String ch) {
 
-        if (ch.toLowerCase().equals("x"))
+        if (ch.equalsIgnoreCase("x") || ch.equalsIgnoreCase("delete"))
         {
             if (count > 0) {
-                screen.key(ch.toLowerCase(), count);
+                screen.key("x", count);
                 count--;
             }
         }
