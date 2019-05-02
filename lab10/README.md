@@ -1,19 +1,22 @@
 Comparison between Lab #10 and Lab #1:
 
-Crank Model (25 Cents)<br/>
+<b>Crank Model (25 Cents)</b><br/>
 
 <img src="output/Crank_25Cents.png" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 <br/>
 
-Crank Model (50 Cents)<br/>
+<b>Crank Model (50 Cents)</b><br/>
+
 <img src="output/Crank_50Cents.png" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 <br/>
 
-Slot Model (25 Cents)<br/>
+<b>Slot Model (25 Cents)</b><br/>
+
 <img src="output/Slot_25Cents.png" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 <br/>
 
-Slot Model (50 Cents)<br/>
+<b>Slot Model (50 Cents)</b><br/>
+
 <img src="output/Slot_50Cents.png" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 <br/>
 
