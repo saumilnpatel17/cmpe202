@@ -1,4 +1,4 @@
-<Alt-h3>Lab 6 Implementation:</Alt-h3>
+#alt-h2 Lab 6 Implementation:
 
 I have created StrategyTest Class which contains the main method.
 
